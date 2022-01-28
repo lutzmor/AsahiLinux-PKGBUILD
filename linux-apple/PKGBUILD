@@ -3,7 +3,6 @@
 
 buildarch=8
 
-pkgbase=linux
 pkgname=linux-asahi
 pkgver=20200118
 pkgrel=1
@@ -64,7 +63,7 @@ _package() {
   provides=("linux=${pkgver}" "WIREGUARD-MODULE")
   replaces=('linux-armv8')
   conflicts=('linux')
-  backup=("etc/mkinitcpio.d/${pkgbase}.preset")
+  backup=("etc/mkinitcpio.d/${pkgname}.preset")
   install=${pkgname}.install
 
   cd ${_srcname}
